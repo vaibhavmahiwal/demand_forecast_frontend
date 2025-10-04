@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Map from './Map';
+import { BASE_URL } from "./config";
+const API_URL = BASE_URL;
 
 // Keyframes for Tailwind CSS animations (must be defined in head or style tag)
 const tailwindConfig = `
@@ -66,7 +68,6 @@ function App() {
   const [selectedAdminLevel, setSelectedAdminLevel] = useState("");
 
   // Flask API URL (FIXED: Using 127.0.0.1 for stability)
-  const API_URL = "http://127.0.0.1:5002/api";
 
   // State mapping for admin oversight
   const stateMapping = {
